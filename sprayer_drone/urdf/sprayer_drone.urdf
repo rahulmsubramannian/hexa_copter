@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="sprayer_drone">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00014044 6.4053E-09 -0.0029784"
+        rpy="0 0 0" />
+      <mass
+        value="1.4013" />
+      <inertia
+        ixx="0.015164"
+        ixy="-9.9515E-10"
+        ixz="-6.3449E-10"
+        iyy="0.01771"
+        iyz="1.0724E-11"
+        izz="0.032757" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="prop1">
+    <inertial>
+      <origin
+        xyz="1.1102E-16 0.0070378 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.026553" />
+      <inertia
+        ixx="4.8335E-07"
+        ixy="-6.0245E-22"
+        ixz="-1.1374E-21"
+        iyy="0.00039871"
+        iyz="5.8633E-23"
+        izz="0.00039845" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor1"
+    type="continuous">
+    <origin
+      xyz="-0.43301 -0.25 0.0044862"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="prop2">
+    <inertial>
+      <origin
+        xyz="5.5511E-17 0.0070378 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.026553" />
+      <inertia
+        ixx="4.8335E-07"
+        ixy="-2.068E-22"
+        ixz="-3.6786E-21"
+        iyy="0.00039871"
+        iyz="-1.2047E-22"
+        izz="0.00039845" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor2"
+    type="continuous">
+    <origin
+      xyz="-0.43301 0.25 0.0052997"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="prop3">
+    <inertial>
+      <origin
+        xyz="4.7536E-17 0.0070378 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.026553" />
+      <inertia
+        ixx="4.8335E-07"
+        ixy="1.3267E-22"
+        ixz="-1.1374E-21"
+        iyy="0.00039871"
+        iyz="3.0132E-23"
+        izz="0.00039845" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor3"
+    type="continuous">
+    <origin
+      xyz="0 0.5 0.005"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="prop4">
+    <inertial>
+      <origin
+        xyz="0 0.0070378 5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.026553" />
+      <inertia
+        ixx="4.8335E-07"
+        ixy="-6.6984E-22"
+        ixz="-3.9291E-21"
+        iyy="0.00039871"
+        iyz="-2.9509E-24"
+        izz="0.00039845" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor4"
+    type="continuous">
+    <origin
+      xyz="0.43301 0.25 0.005"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop4" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="prop5">
+    <inertial>
+      <origin
+        xyz="0 0.0070378 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.026553" />
+      <inertia
+        ixx="4.8335E-07"
+        ixy="-6.2935E-22"
+        ixz="-3.9291E-21"
+        iyy="0.00039871"
+        iyz="-1.9037E-23"
+        izz="0.00039845" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor5"
+    type="continuous">
+    <origin
+      xyz="0.43301 -0.25 0.0059028"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop5" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="prop6">
+    <inertial>
+      <origin
+        xyz="4.7536E-17 0.0070378 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.026553" />
+      <inertia
+        ixx="4.8335E-07"
+        ixy="1.8886E-22"
+        ixz="-1.1374E-21"
+        iyy="0.00039871"
+        iyz="2.9972E-23"
+        izz="0.00039845" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://sprayer_drone/meshes/prop6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor6"
+    type="continuous">
+    <origin
+      xyz="0 -0.5 0.0060731"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="prop6" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
